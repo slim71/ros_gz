@@ -58,6 +58,18 @@ TEST(ROSSubscriberTest, Entity)
 }
 
 /////////////////////////////////////////////////
+TEST(ROSSubscriberTest, EntityFactory)
+{
+  MyTestClass<ros_gz_interfaces::msg::EntityFactory> client("entity_factory");
+
+  using namespace std::chrono_literals;
+  ros_gz_bridge::testing::waitUntilBoolVarAndSpin(
+    ros_subscriber::TestNode(), client.callbackExecuted, 10ms, 200);
+
+  EXPECT_TRUE(client.callbackExecuted);
+}
+
+/////////////////////////////////////////////////
 TEST(ROSSubscriberTest, Contact)
 {
   MyTestClass<ros_gz_interfaces::msg::Contact> client("contact");

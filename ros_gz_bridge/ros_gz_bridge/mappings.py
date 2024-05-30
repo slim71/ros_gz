@@ -62,6 +62,7 @@ MAPPINGS = {
         Mapping('Contact', 'Contact'),
         Mapping('Contacts', 'Contacts'),
         Mapping('Entity', 'Entity'),
+        Mapping('EntityFactory', 'EntityFactory'),
         Mapping('Float32Array', 'Float_V'),
         Mapping('GuiCamera', 'GUICamera'),
         Mapping('JointWrench', 'JointWrench'),
