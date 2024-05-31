@@ -69,9 +69,12 @@ The following message types can be bridged for topics:
 
 And the following for services:
 
-| ROS type                             | Gazebo request             | Gazebo response       |
-|--------------------------------------|:--------------------------:| --------------------- |
-| ros_gz_interfaces/srv/ControlWorld   | ignition.msgs.WorldControl | ignition.msgs.Boolean |
+| ROS type                            |       Gazebo request        | Gazebo response       |
+| ----------------------------------- | :-------------------------: | --------------------- |
+| ros_gz_interfaces/srv/ControlWorld  | ignition.msgs.WorldControl  | ignition.msgs.Boolean |
+| ros_gz_interfaces/srv/SetEntityPose | ignition.msgs.SetEntityPose | ignition.msgs.Boolean |
+| ros_gz_interfaces/srv/SpawnEntity   |    ignition.msgs.Entity     | ignition.msgs.Boolean |
+| ros_gz_interfaces/srv/DeleteEntity  | ignition.msgs.EntityFactory | ignition.msgs.Boolean |
 
 Run `ros2 run ros_gz_bridge parameter_bridge -h` for instructions.
 
